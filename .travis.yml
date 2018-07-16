@@ -12,9 +12,8 @@ before_deploy:
 - cp build/*.zip build/*.zip.md5 build/addon.xml icon.png dist/
 deploy:
   provider: s3
-  access_key_id: AKIAJA536STKTMHCZFZQ
-  secret_access_key:
-    secure: KreMQZF4Z1HLs55elTqX1s92lo3vlNT9lF7J/b0IJiUJKEavyb10eEITAj0jgxv3f1XQOZ4KIExryYt7Pwrt4NvK3k+7UB9RcRmmbvJwh7DYUmOOi7HDgIF3svXtzkBZtotcX25afaldFWtqwXSQT3p8SsuHi5ZgfiPkPeqhXzo6OL6Jhtm1ljMPvghd+ORas9HZ2pL4gajFtE7JYR00ROGVEBz1QGkSRRC7jr8/ckSQgD84hHmyOPo8IHwFLMJaoNOc76uzuFp8T4h2XinHJeJaLJogwTqe8RwHz23TC1T4FIXiAoFUWN22YddbDpYgqLRq1j1iLmy0uGqzLUVtCCozbJrAvNDq2++6azMcnUCbltizoOj620dkEtZ6X/Tha7nxUM76DjawA777LpW3T61EErEuaqlWLegGWovSUt5bhzlLw5up5E2hGnmsPoUnZTMeNh3gPDaltNIchnhj7dKb/AKO02l3TsZ546Js2MlTEAOd98siqqK0DHj5n0fE307cw1IrdTK//sZCsIAfkP13WtoWNyFV/dyPf+/3rff0UIVuJ90rzi32jGkzzHvN3WfPbUTGtxQczJEWDV+A8JZbrGp/8gt4pmi2aRqHIjhPBRwxzRqXVEBfpK47VC75O5kSGe7dbOzYXf4YT0MutvYEjZo4pwHDiqxC/YTzLUM=
+  access_key_id: "${AWS_KEY_ID}"
+  secret_access_key: "${AWS_ACCESS_KEY}"
   bucket: xbmc.beardypig.plugins
   local-dir: dist
   upload-dir: addons/script.module.pycountry
